@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* Header */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.contact-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-left: 4px solid #38bdf8;
+    padding-left: 12px;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skills-grid h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.skills-grid ul {
+    list-style: none;
+}
+
+.skills-grid li {
+    margin-bottom: 6px;
+    color: #cbd5f5;
+}
+
+/* Cards */
+.card {
+    background-color: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.card a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Certificates */
+.certificate {
+    text-align: center;
+}
+
+.certificate img {
+    max-width: 70%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #020617;
+    color: #94a3b8;
+    margin-top: 50px;
+}
