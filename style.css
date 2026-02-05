@@ -15,7 +15,50 @@ body {
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #020617, #0f172a);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        120deg,
+        #303e7c,
+        #16274f,
+        #0b2184
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 4s ease infinite;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+        transparent,
+        rgba(1, 179, 255, 0.05),
+        transparent
+    );
+    animation: scan 8s linear infinite;
+    pointer-events: none;
+}
+@keyframes scan {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(50%);
+    }
+}
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero h1 {
@@ -116,4 +159,62 @@ footer {
     background-color: #020617;
     color: #94a3b8;
     margin-top: 50px;
+}
+
+/* ===== Banner Animations ===== */
+
+/* Fade + slide animation */
+.fade-slide {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+.fade-slide.delay {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating animation */
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Contact link hover animation */
+.contact-links a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.contact-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+.contact-links a:hover::after {
+    width: 100%;
 }
